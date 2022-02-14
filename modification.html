@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="img/uca.png" class="rounded-circle z-depth-2" alt="100x100"data-holder-rendered="true" height="50" width="50"/>
+
+    <title>Modification</title>
+  </head>
+
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-lg">
+        <a class="navbar-brand p-0" href="#">
+          <img class="rounded-circle z-depth-2" alt="100x100" src="img/logo.jpg"
+          data-holder-rendered="true" height="50" width="50">
+        </a>
+      <a href="#"><i class="fas fa-anchor text-warning fa-2x"></i></a>
+      <button
+        type="button"
+        class="navbar-toggler bg-light"
+        data-toggle="collapse"
+        data-target="#nav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="nav">
+         <ul class="navbar-nav" id="navigation_admin">
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold text-uppercase px-3"
+              href="acceuil.html"
+              >Acceuil</a
+            >
+          </li>
+          <li class="nav-item float-left" id="logout" style="display: none;">
+            <a
+              class="nav-link text-light font-weight-bold text-uppercase px-3 "
+              onclick="logout()" href="#"
+              >Se déconnecter</a
+            >
+          </li>
+        </ul>
+        <form class="form-inline ml-3">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Rechercher" />
+          </div>
+        </form>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Bread crumb -->
+    <div class="container my-3">
+      <nav class="breadcrumb">
+        <h6 class="breadcrumb-item active">Index</h6>
+      </nav>
+    <!-- End of Bread crumb -->
+
+    <!-- Posts -->
+    <div class="row">
+      <div class="col-12 col-xl-9">
+        <h2 class="h4 publication mb-0 p-4 rounded-top text-light">Publications</h2>
+        <table class="table table-striped table-bordered table-resposive">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="post-col">Titre</th>
+              <th scope="col">Date de publication</th>
+              <th scope="col">Auteur</th>
+              <th scope="col">Supprimer Article</th>
+              <th scope="col">Modifier Article</th>
+            </tr>
+          </thead>
+          <tbody id="table_body">
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Aside -->
+    <div class="col-12 col-xl-3">
+      <aside>
+        <div class="row">
+         
+          <div class="col-12 col-sm-6 col-xl-12" id="stats" >
+            <div class="card">
+              <div class="card-body" id="card">
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- End of Aside -->
+
+    <!-- Footer-->
+    <footer class="small bg-info">
+      <div class="container">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item text-light">&copy; 2020 ISIMA Forum</li>
+          <li class="list-inline-item"><a href="#" class="text-light">politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- End of Footer-->
+    
+    </div>
+    </div>
+    <!-- End of Posts -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+     apiKey: "AIzaSyAYDZWlRMVHxjr1EHBxht-ACviEA_lmEnA",
+    authDomain: "cruid-b9c69.firebaseapp.com",
+    databaseURL: "https://cruid-b9c69-default-rtdb.firebaseio.com",
+    projectId: "cruid-b9c69",
+    storageBucket: "cruid-b9c69.appspot.com",
+    messagingSenderId: "1011858311171",
+    appId: "1:1011858311171:web:666abd4df64b27f1bba636",
+    measurementId: "G-0Z58X1NB1C"
+    };
+    firebase.initializeApp(config);
+  </script> <script src="modf.js"></script>
+  <script src="session.js"></script>
+  </body>
+</html>

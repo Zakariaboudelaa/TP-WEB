@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="img/uca.png" class="rounded-circle z-depth-2" alt="100x100"data-holder-rendered="true" height="50" width="50"/>
+
+    <title>Création</title>
+  </head>
+
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-lg">
+        <a class="navbar-brand p-0" href="#">
+          <img class="rounded-circle z-depth-2" alt="100x100" src="img/logo.jpg"
+          data-holder-rendered="true" height="50" width="50">
+        </a>
+      <a href="#"><i class="fas fa-anchor text-warning fa-2x"></i></a>
+      <button
+        type="button"
+        class="navbar-toggler bg-light"
+        data-toggle="collapse"
+        data-target="#nav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="nav">
+        <ul class="navbar-nav" id="navigation_admin">
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold text-uppercase px-3"
+              href="acceuil.html"
+              >Acceuil</a
+            >
+          </li>
+          <li class="nav-item float-left" id="logout" style="display: none;">
+            <a
+              class="nav-link text-light font-weight-bold text-uppercase px-3 "
+              onclick="logout()" href="#"
+              >Se déconnecter</a
+            >
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+</svg></button>
+    </form>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Bread crumb -->
+    <div class="container my-3" onsubmit="return false">
+      <nav class="breadcrumb">
+        <h6 class="breadcrumb-item active">Index</h6>
+      </nav>
+    <!-- End of Bread crumb -->
+
+    <!-- Posts -->
+    <div class="row">
+      <div class="col-12 col-xl-9">
+        <form>
+  
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form6Example3">Titre</label>
+    <input type="text" id="titrev" class="form-control" required/>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form6Example4">Résumé</label>
+    <input type="text" id="resumev" class="form-control" required/>
+  </div>
+
+
+
+  <!-- Contenu de l'article -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form6Example7">Contenu de l'article</label>
+    <textarea class="form-control" id="contenuv" rows="4"required></textarea>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4" onclick="submitclick()" >Soumettre les modifications</button>
+</form>
+      </div>
+      <!-- Aside -->
+    <div class="col-12 col-xl-3">
+      <aside>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-xl-12" id="stats">
+            <div class="card">
+              <div class="card-body" id="card">
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- End of Aside -->
+
+    <!-- Footer-->
+    <footer class="small bg-info">
+      <div class="container">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item text-light">&copy; 2020 ISIMA Forum</li>
+          <li class="list-inline-item"><a href="#" class="text-light">politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- End of Footer-->
+    
+    </div>
+    </div>
+    <!-- End of Posts -->
+
+
+
+
+
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+     apiKey: "AIzaSyAYDZWlRMVHxjr1EHBxht-ACviEA_lmEnA",
+    authDomain: "cruid-b9c69.firebaseapp.com",
+    databaseURL: "https://cruid-b9c69-default-rtdb.firebaseio.com",
+    projectId: "cruid-b9c69",
+    storageBucket: "cruid-b9c69.appspot.com",
+    messagingSenderId: "1011858311171",
+    appId: "1:1011858311171:web:666abd4df64b27f1bba636",
+    measurementId: "G-0Z58X1NB1C"
+    };
+    firebase.initializeApp(config);
+  </script> <script src="creation.js"></script>
+  <script src="session.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+  </body>
+</html>
